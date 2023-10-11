@@ -1,10 +1,15 @@
 import "./App.css";
+import { Card } from "./components/Card/Card";
 import { Header } from "./components/Header/Header";
+import { Container } from "./components/shared/Container";
 
 function App() {
 	return (
-		<div className="px-40 py-5">
-			<Header />
+		<div>
+			<Container>
+				<Header />
+				<Card />
+			</Container>
 		</div>
 	);
 }
