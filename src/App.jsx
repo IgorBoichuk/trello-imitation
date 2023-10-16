@@ -1,16 +1,16 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
-import { Card } from "./components/Card/Card";
-import { Header } from "./components/Header/Header";
-import { Container } from "./components/shared/Container";
+
+import { SharedLayout } from "./components/SharedLeyout/SharedLayout";
+import { Home } from "./components/Body/Home";
 
 function App() {
 	return (
-		<div>
-			<Container>
-				<Header />
-				<Card />
-			</Container>
-		</div>
+		<Routes>
+			<Route path="/" element={<SharedLayout />}>
+				<Route index element={<Home />} />
+			</Route>
+		</Routes>
 	);
 }
 
